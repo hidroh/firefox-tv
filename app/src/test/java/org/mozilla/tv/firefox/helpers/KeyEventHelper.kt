@@ -8,7 +8,7 @@ import android.view.KeyEvent
 
 private val RANDOM_KEYCODES = setOf(
     KeyEvent.KEYCODE_HOME,
-    KeyEvent.KEYCODE_MENU,
+    KeyEvent.KEYCODE_INFO,
     KeyEvent.KEYCODE_DPAD_LEFT,
     KeyEvent.KEYCODE_DPAD_CENTER,
     KeyEvent.KEYCODE_ENTER,

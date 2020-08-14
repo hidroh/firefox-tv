@@ -152,7 +152,7 @@ class ScreenController(private val sessionRepo: SessionRepo) {
         fragmentManager: FragmentManager,
         @VisibleForTesting(otherwise = NONE) currentActiveScreen: ActiveScreen? = _currentActiveScreen.value
     ): Boolean {
-        if (keyEvent.keyCode == KeyEvent.KEYCODE_MENU) {
+        if (keyEvent.keyCode == KeyEvent.KEYCODE_INFO) {
             return when (keyEvent.action) {
                 KeyEvent.ACTION_DOWN -> handleMenu(fragmentManager)
                 else -> true // We swallow ACTION_UP to only handle the key event once.

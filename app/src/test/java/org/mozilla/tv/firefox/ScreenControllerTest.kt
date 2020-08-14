@@ -40,7 +40,7 @@ class ScreenControllerTest {
         every { controller.handleMenu(any()) } returns false
 
         ActiveScreen.values().forEach { activeScreen ->
-            KeyEventHelper.getDownUpKeyEvents(KeyEvent.KEYCODE_MENU).forEach { keyEvent ->
+            KeyEventHelper.getDownUpKeyEvents(KeyEvent.KEYCODE_INFO).forEach { keyEvent ->
                 controller.dispatchKeyEvent(keyEvent, fragmentContainer.fragmentManager, activeScreen)
 
                 verify(exactly = 0) { fragmentContainer.navigationOverlayFragment.dispatchKeyEvent(any()) }
@@ -65,5 +65,5 @@ class ScreenControllerTest {
         }
     }
 
-    private fun getNonMenuKeyEvents(): List<KeyEvent> = KeyEventHelper.getRandomKeyEventsExcept(KeyEvent.KEYCODE_MENU)
+    private fun getNonMenuKeyEvents(): List<KeyEvent> = KeyEventHelper.getRandomKeyEventsExcept(KeyEvent.KEYCODE_INFO)
 }
